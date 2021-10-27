@@ -35,9 +35,7 @@ app.get('/loadState/:name', async(req, res)=>{
             Name: name
         });
         if(playerToLoad !== null){
-            //let parsedState = JSON.parse(playerToLoad.State)
-            //console.log(JSON.parse(playerToLoad.State));
-        
+            //console.log(typeof playerToLoad.State);
             res.status(200).send({statusCode: 200, playerToLoad: playerToLoad.State});
             
             

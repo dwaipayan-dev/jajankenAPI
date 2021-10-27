@@ -7,7 +7,7 @@ const playerSchema = new mongoose.Schema({
         required: true,
     },
     State:{
-        type: String
+        type: Object
     }
 });
 
