@@ -11,7 +11,7 @@ const app = express();
 //Importing models
 const Player = require('./Models/Player.model');
 
-const PORT = process.env.NODE_PORT || 8084;
+const PORT = 8084;
 
 //Middlewares
 app.use(express.json());
@@ -78,7 +78,7 @@ app.post('/saveState', async(req,res)=>{
     }
 })
 
-app.listen(PORT, async()=>{
+app.listen(process.env.PORT || PORT, async()=>{
     try{
         await connectDb();
         console.log("Database connected successfully...");
